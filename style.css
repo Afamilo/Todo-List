@@ -7,3 +7,21 @@ header{
     text-align: center;
     padding: 15px;
 }
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow: auto;
+}
+.left-side-bar{
+    background-color: gray;
+    padding: 20px;  
+}
+.add{
+    background-color: rgb(248, 94, 94);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
