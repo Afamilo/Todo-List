@@ -10,7 +10,43 @@
     <header class="header">
         <h1>Task Scheduler</h1>
     </header>
-   
+    <main class="container">
+        <div class="left-div">
+            <h2>Add Todo</h2>
+            <div class="form">
+                <div class="title">
+                    <label for="Todo Title">Title</label>
+                    <input type="text" placeholder="Todo-Title" id="todo-title">
+                </div>
+                <div class="details">
+                    <label for="Details">Details</label>
+                    <input type="text" placeholder="details" id="todo-details">
+                </div>
+                <div class="dates">
+                    <label for="date">Due Date</label>
+                    <input type="date" id="todo-date">
+                </div>
+                <div class="option">
+                    <select class="priority-sel" id="todo-priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <button type="submit">Submit ToDo</button>
+            </div>
+        
+            <div class="category-div">
+            <h3>Task Categorries</h3>
+            <ul class="category-list" data-list></ul>
+    
+            <form action="" class="new-category-form">
+                <input type="text" class="new-category-input" placeholder="New Category"></input>
+                <button class="new-category-btn" id="newCategoryBtn"> + </button>
+            </form>
+        </div>
+    </div>
+        
     </main>
 </body>
 </html>
