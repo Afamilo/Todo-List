@@ -80,6 +80,11 @@ input{
     border-radius: 3px;
     border: none;
     padding: 5px;
-
 }
-
+.right-side-bar{
+    margin-top: 20px;
+    text-align: center;
+}
+.right-side-bar h2{
+    font-size: 30px;
+}
