@@ -13,7 +13,7 @@ main{
     overflow: auto;
 }
 .left-side-bar{
-    
+    height: 500px;
     background-color: gray;
     padding: 10px; 
      
@@ -25,6 +25,10 @@ main{
     border-radius: 5px;
     text-align: center;
     margin-bottom: 20px;
+}
+.container{
+    position: relative;
+    text-align: center;
 }
 .form{
     display: flex;
@@ -67,15 +71,13 @@ input{
     border-radius: 5px;
     padding: 10px;
 }
-.new-category-form input{
+.new-category-form{
     position: relative;
 }
 .category-div h2{
     margin-bottom: 5px;
 }
 .new-category-btn{
-    position: absolute;
-    left: 185px;
     background-color:  rgb(248, 94, 94);
     border-radius: 3px;
     border: none;
