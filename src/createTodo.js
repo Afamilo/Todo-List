@@ -7,3 +7,9 @@ function TodoObJ(title, details, dueDate, priority) {
     this.priority = priority;
 }
 
+function clearForm() {
+    title.value = "";
+    details.value = "";
+    dueDate.value = "";
+    priority.value = "";
+}
