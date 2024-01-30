@@ -1,3 +1,3 @@
+import { submitTodo } from "./dommanipulation";
 
-
-console.log("helo")
+submitTodo();
