@@ -98,6 +98,12 @@ function renderOnScreen(){
     }
 }
 
+export function clearForm() {
+    title.value = "";
+    details.value = "";
+    dueDate.value = "";
+    priority.value= "";
+}
 
 export function storage() {
     localStorage.setItem(`Todo`, JSON.stringify(Todo));
