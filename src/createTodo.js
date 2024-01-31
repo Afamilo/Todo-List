@@ -99,3 +99,14 @@ function renderOnScreen(){
 }
 
 
+export function storage() {
+    localStorage.setItem(`Todo`, JSON.stringify(Todo));
+}
+ 
+function restore() {
+    Todo = JSON.parse(localStorage.getItem('Todo'));
+    renderOnScreen();
+}
+
+restore();
+
