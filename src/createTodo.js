@@ -1,17 +1,15 @@
 let Todo = []; 
 
+let title = document.querySelector("#todo-title");
+    let details = document.querySelector("#todo-details");
+    let dueDate = document.querySelector("#todo-date");
+    let priority = document.querySelector("#todo-priority");
+
 function TodoOb(title, details, dueDate, priority) {
     this.title = title;
     this.details = details;
     this.dueDate = dueDate;
     this.priority = priority;
-}
-
-function clearForm() {
-    title.value = "";
-    details.value = "";
-    dueDate.value = "";
-    priority.value = "";
 }
 
 
@@ -23,6 +21,7 @@ export function addTodoToList() {
     let newTodo = new TodoOb(title, details, dueDate, priority);
     Todo.push(newTodo);
    renderOnScreen();
+   clearForm();
 }
 
 function getTodoElement(todo) {
@@ -33,12 +32,16 @@ function getTodoElement(todo) {
     const todoDetails = getTodoDetails(todo);
     const todoDueDate = getDueDate(todo);
     const todoPriority = getTodoPriority(todo);
-   
+    const completedBtn = getCompletedTodoBtn(todo);
+    const deleteTodoBtn = getDeleteTodoBtn(todo);
+
     todoElement.appendChild(todoTitle);
     todoElement.appendChild(todoDetails);
     todoElement.appendChild(todoDueDate);
     todoElement.appendChild(todoPriority);
-   
+    todoElement.appendChild(completedBtn);
+    todoElement.appendChild(deleteTodoBtn);
+
     return todoElement;
 }
 
@@ -70,6 +73,20 @@ function getTodoPriority(todo){
     return todoPriority;
 }
 
+function getCompletedTodoBtn(){
+    const completedTodoBtn = document.createElement("button");
+    completedTodoBtn.classList.add("completed-btn");
+    completedTodoBtn.textContent = "Completed";
+    return completedTodoBtn;
+}
+
+function getDeleteTodoBtn(){
+    const deleteTodoBtn = document.createElement("button");
+    deleteTodoBtn.classList.add("delete-btn");
+    deleteTodoBtn.textContent = "X";
+    return deleteTodoBtn;
+}
+
 function renderOnScreen(){
     let todoScreen = document.querySelector(".display-sec");
     todoScreen.innerHTML = "";
@@ -80,4 +97,5 @@ function renderOnScreen(){
         todoScreen.appendChild(todoElement)
     }
 }
+
 

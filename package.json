@@ -4,7 +4,8 @@
   "description": "A to do list is  an app from the theodin project that creates and save list of  tasks that one have to do, or things that you want to do",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
