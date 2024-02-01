@@ -84,6 +84,10 @@ function getDeleteTodoBtn(){
     const deleteTodoBtn = document.createElement("button");
     deleteTodoBtn.classList.add("delete-btn");
     deleteTodoBtn.textContent = "X";
+    
+    deleteTodoBtn.addEventListener('click', ()=>{
+        deleteTodo();
+    })
     return deleteTodoBtn;
 }
 
@@ -97,7 +101,10 @@ function renderOnScreen(){
         todoScreen.appendChild(todoElement)
     }
 }
-
+function deleteTodo(index) {
+    Todo.splice(index, 1);
+    renderOnScreen();
+}
 export function clearForm() {
     title.value = "";
     details.value = "";
